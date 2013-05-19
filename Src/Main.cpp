@@ -332,7 +332,7 @@ static void outerCrashHandler(int sig, siginfo_t *info, void *data)
         logFileName = logFileNameBuffer;
     }
     
-    crashLogFD = open(logFileName, O_WRONLY | O_CREAT | O_TRUNC);
+    crashLogFD = open(logFileName, O_WRONLY | O_CREAT | O_TRUNC, 0666);
 
 #if 0 // Disable until we can do this without calling malloc and free:
 	int memTotal, memFree, swapTotal, swapFree, memchuteFree, memUsage;
