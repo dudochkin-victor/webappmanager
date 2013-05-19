@@ -392,7 +392,7 @@ void SysMgrWebBridge::slotViewportChangeRequested()
 void SysMgrWebBridge::slotSetupPage(const QUrl& url)
 {
     // QT5_TODO:
-#if (QT_VERSION < QT_VERSION_CHECK(5, 0, 0))
+#if (QT_VERSION < QT_VERSION_CHECK(5, 0, 0)) && 0
     QString attributes = m_page->attributes();
     if (!attributes.isEmpty())
         setArgs(attributes.toUtf8().constData());
@@ -487,7 +487,7 @@ SysMgrWebPage::SysMgrWebPage(QObject* parent) : QWebPage(parent)
     settings()->setAttribute(QWebSettings::LocalContentCanAccessRemoteUrls, true);
     settings()->setAttribute(QWebSettings::LocalContentCanAccessFileUrls, true);
     settings()->setAttribute(QWebSettings::PluginsEnabled, true);
-#if (QT_VERSION < QT_VERSION_CHECK(5, 0, 0))
+#if (QT_VERSION < QT_VERSION_CHECK(5, 0, 0)) && 0
     settings()->setPluginSupplementalPath("/usr/lib/BrowserPlugins");
 #else
     // QT5_TODO (questionable fix)

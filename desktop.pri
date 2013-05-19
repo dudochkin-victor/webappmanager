@@ -66,8 +66,8 @@ INCLUDEPATH += \
 	$$(LUNA_STAGING)/include/QtOpenGL \
 	$$(LUNA_STAGING)/include/QtSql \
 	$$(LUNA_STAGING)/include/QtDeclarative \
-	$$(LUNA_STAGING)/include/ime \
-        $$(LUNA_STAGING)/include/luna-sysmgr-common \
+	$$(LUNA_STAGING)/usr/include/ime \
+        $$(LUNA_STAGING)/usr/include/luna-sysmgr-common \
 	$$(LUNA_STAGING)/usr/include
 
 contains(QT_VERSION, "^5.*") {
